@@ -99,7 +99,7 @@ with col1:
     sns.barplot(
         y="cnt", 
         x="season",
-        hue=y,
+        hue="cnt",
         palette=colors,
         data=season_df.sort_values(by="cnt", ascending=False),
         ax=ax
@@ -118,7 +118,7 @@ with col2:
     sns.barplot(
         y="cnt", 
         x="hr_group",
-        hue=y,
+        hue="cnt",
         palette=colors,
         data=hourGroup_df.sort_values(by="cnt", ascending=False),
         ax=ax
