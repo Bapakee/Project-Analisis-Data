@@ -99,8 +99,9 @@ with col1:
     sns.barplot(
         y="cnt", 
         x="season",
-        data=season_df.sort_values(by="cnt", ascending=False),
+        hue=y,
         palette=colors,
+        data=season_df.sort_values(by="cnt", ascending=False),
         ax=ax
     )
     ax.set_title("Jumlah Penjualan Setiap Bulan", loc="center", fontsize=50)
@@ -117,8 +118,9 @@ with col2:
     sns.barplot(
         y="cnt", 
         x="hr_group",
-        data=hourGroup_df.sort_values(by="cnt", ascending=False),
+        hue=y,
         palette=colors,
+        data=hourGroup_df.sort_values(by="cnt", ascending=False),
         ax=ax
     )
     ax.set_title("Jumlah Penjualan Kelompok Jam", loc="center", fontsize=50)
