@@ -91,8 +91,8 @@ with st.sidebar:
 
 st.subheader("Kelompok Jumlah Penjualan")
 col1, col2 = st.columns(2)
-colors = ["#90CAF9", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3"] 
-
+colors1 = ["#90CAF9", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3"] 
+colors2 = ["#90CAF9", "#D3D3D3", "#D3D3D3", "#D3D3D3"]
 with col1:
     fig, ax = plt.subplots(figsize=(20, 10))
  
@@ -100,11 +100,11 @@ with col1:
         y="cnt", 
         x="season",
         hue="cnt",
-        palette=colors,
+        palette=colors2,
         data=season_df.sort_values(by="cnt", ascending=False),
         ax=ax
     )
-    ax.set_title("Jumlah Penjualan Setiap Bulan", loc="center", fontsize=50)
+    ax.set_title("Jumlah Penjualan Setiap Musim", loc="center", fontsize=50)
     ax.set_ylabel(None)
     ax.set_xlabel(None)
     ax.tick_params(axis='x', labelsize=35)
@@ -119,7 +119,7 @@ with col2:
         y="cnt", 
         x="hr_group",
         hue="cnt",
-        palette=colors,
+        palette=colors1,
         data=hourGroup_df.sort_values(by="cnt", ascending=False),
         ax=ax
     )
