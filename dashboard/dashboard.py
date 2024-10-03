@@ -91,8 +91,8 @@ with st.sidebar:
 
 st.subheader("Kelompok Jumlah Penjualan")
 col1, col2 = st.columns(2)
-colors1 = ["#90CAF9", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3"] 
-colors2 = ["#90CAF9", "#D3D3D3", "#D3D3D3", "#D3D3D3"]
+colors1 = ["#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#90CAF9"] 
+colors2 = ["#D3D3D3", "#D3D3D3", "#D3D3D3", "#90CAF9"]
 with col1:
     fig, ax = plt.subplots(figsize=(20, 10))
  
